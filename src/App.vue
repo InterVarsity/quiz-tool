@@ -1,18 +1,15 @@
 <template>
   <div id="app">
-    <HelloWorld msg="which princess are you"/>
     <Question :question="this.question" :answers="this.answers" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Question from './components/Question.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
     Question
   },
   data () {
