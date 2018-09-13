@@ -1,27 +1,17 @@
 <template>
   <div id="app">
-    <Question :question="this.question" :answers="this.answers" />
+    <Quiz
+      title="Who's your apostle doppelganger?" />
   </div>
 </template>
 
 <script>
-import Question from './components/Question.vue'
+import Quiz from './components/Quiz.vue'
 
 export default {
   name: 'app',
   components: {
-    Question
-  },
-  data () {
-    return {
-      question: 'What\'s Up?',
-      answers: {
-        'Answer1': 'cat1',
-        'Answer2': 'cat2',
-        'Answer3': 'cat3',
-        'Answer4': 'cat4'
-      }
-    }
+    Quiz
   }
 }
 </script>
@@ -34,5 +24,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>

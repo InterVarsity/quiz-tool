@@ -1,6 +1,6 @@
 <template>
   <div class="question">
-    <h1>{{ question }}</h1>
+    <h2>{{ question }}</h2>
     <ul>
       <li v-for="(category, answer) in answers" :key="answer">
         <a href="#" class="answer" v-on:click="selectAnswer($event)">
@@ -17,10 +17,12 @@ export default {
   name: 'Question',
   props: {
     question: String,
-    answers: Object
+    answers: Object,
+    index: Number
   },
   methods: {
     selectAnswer (e) {
+      this.$emit('answer-selected', this.index)
       e.preventDefault()
       console.log(e)
       console.log(e.target)
@@ -32,8 +34,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .question {
-  width: 800px;
-  height: 100px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0;
+  display: none;
+}
+
+.question.active {
+  display: block;
+}
+
+h1 {
+  margin: 0;
 }
 
 li {

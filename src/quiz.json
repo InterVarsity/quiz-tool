@@ -1,0 +1,32 @@
+{
+  "title": "Quiz Title",
+  "questions": [
+    {
+      "title": "Which activity would you rather do??",
+      "category": "category1",
+      "answers": {
+        "Answer1": "3",
+        "Answer2": "1",
+        "Answer3": "0",
+        "Answer4": "2"
+      }
+    },
+    {
+      "title": "What would you do in [SITUATION]?",
+      "category": "category1",
+      "answers": {
+        "Answer1": "1",
+        "Answer2": "2",
+        "Answer3": "3",
+        "Answer4": "4"
+      }
+    }
+  ],
+  "results": {
+    "category1": {
+      "identity": "Famous Person 1",
+      "summary": "You're Famous Person 1! That means X, Y, and Z.",
+      "image": "famous_person_1.png"
+    }
+  }
+}
