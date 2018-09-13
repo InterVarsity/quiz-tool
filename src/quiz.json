@@ -2,26 +2,6 @@
   "title": "Quiz Title",
   "questions": [
     {
-      "title": "Which activity would you rather do??",
-      "category": "category1",
-      "answers": {
-        "Answer1": "4",
-        "Answer2": "2",
-        "Answer3": "1",
-        "Answer4": "3"
-      }
-    },
-    {
-      "title": "What would you do in [SITUATION]?",
-      "category": "category1",
-      "answers": {
-        "Answer1": "1",
-        "Answer2": "2",
-        "Answer3": "3",
-        "Answer4": "4"
-      }
-    },
-    {
       "title": "When you eat out, do you order",
       "category": "crossCulture",
       "answers": {
@@ -40,6 +20,46 @@
         "Outside of North America a couple of times": "3",
         "Several different places several different times": "4"
       }
+    },
+    {
+      "title": "When I think about sharing the Gospel, I am drawn to:",
+      "category": "loveStudents",
+      "answers": {
+        "Cats - and typically the ones looking cute on Instagram": "1",
+        "Babies - because they listen well without interrupting": "2",
+        "Students - they have the potential to change the world": "3",
+        "Old folks - they seem happy to see me": "4"
+      }
+    },
+    {
+      "title": "As a student, faith is important to",
+      "category": "loveStudents",
+      "answers": {
+        "Keep me out of trouble": "1",
+        "Give me a sense of purpose and meaning in my studies and relationships": "2",
+        "Make my parents lose less sleep because of me": "3",
+        "Challenge my professors’ narrow-mindedness": "4"
+      }
+    },
+    {
+      "title": "Which best describes your sense of God’s calling for your life?",
+      "category": "calling",
+      "answers": {
+        "To be faithful where I am right now": "1",
+        "To be faithful where I am but also step out to love someone close by": "2",
+        "To be faithful where I am but also make trips to serve somewhere challenging": "3",
+        "To follow Jesus by leaving my current life for a new, challenging place to love people": "4"
+      }
+    },
+    {
+      "title": "What way of serving Jesus is most exciting to you?",
+      "category": "calling",
+      "answers": {
+        "Serving Jesus at my workplace in my home culture": "1",
+        "Serving Jesus by praying for and giving toward ministries throughout the world": "2",
+        "Serving Jesus by loving people who are significantly different from me": "3",
+        "Serving Jesus by moving to a culture different from my own": "4"
+      }
     }
   ],
   "results": {
@@ -48,15 +68,20 @@
       "summary": "",
       "image": ""
     },
-    "category1": {
-      "identity": "Famous Person 1",
-      "summary": "You're Famous Person 1! That means X, Y, and Z.",
-      "image": "famous_person_1.png"
+    "loveStudents": {
+      "identity": "Bill Nye the Science Guy",
+      "summary": "You love students and those interested in learning.  Being around them makes you happy and you can relate well to their place in life.",
+      "image": "Bill Nye.jpg"
+    },
+    "calling": {
+      "identity": "Harry Potter",
+      "summary": "You are called to something special - and you know it.  You are taking steps to explore and live into what you know - even now.",
+      "image": "Harry Potter.jpg"
     },
     "crossCulture": {
-      "identity": "Famous Person 2",
-      "summary": "You're Famous Person 2! You've got a whole lot of different traits and that's really cool",
-      "image": "famous_person_2.png"
+      "identity": "Peace Corp Volunteer",
+      "summary": "You love crossing cultures to make a difference.  You are willing to sacrifice and serve others in uncomfortable places and contexts.",
+      "image": "peace corps.jpg"
     }
   }
 }

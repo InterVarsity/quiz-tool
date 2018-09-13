@@ -1,12 +1,9 @@
 <template>
   <div id="quiz-results">
-    <h1>RESULTS</h1>
-    <div v-on:answer-selected="onAnswerSelected($event)">
-      <!-- {{ this.topCategory }} -->
-      <p class="identity">Your persona is {{ identity }}!</p>
-      <p class="summary">{{ summary }}</p>
-      <img class="image" :src="image" />
-    </div>
+    <!-- {{ this.topCategory }} -->
+    <p class="identity">Your persona is {{ identity }}!</p>
+    <p class="summary">{{ summary }}</p>
+    <img class="image" :src="image" />
     <!-- <code> -->
     <!--   {{ quizAnswers }} -->
     <!--   <hr> -->
@@ -33,7 +30,7 @@ export default Vue.component('QuizResults', {
       return this.categoryDetails[this.topCategory].summary
     },
     image: function () {
-      return this.categoryDetails[this.topCategory].image
+      return '/img/' + this.categoryDetails[this.topCategory].image
     },
     topCategory: function () {
       /*
@@ -60,8 +57,19 @@ export default Vue.component('QuizResults', {
 </script>
 
 <style scoped>
+#quiz-results {
+  font-size: 1.4em;
+  background: #eef;
+  padding: 30px;
+  border-radius: 15px;
+}
+
 .identity {
   color: blue;
   font-weight: bold;
+}
+
+.image {
+  width: 400px;
 }
 </style>
