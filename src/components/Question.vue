@@ -2,10 +2,9 @@
   <div class="question">
     <h2>{{ question }}</h2>
     <ul>
-      <li v-for="(category, answer) in answers" :key="answer">
-        <a href="#" class="answer" v-on:click="selectAnswer($event)">
+      <li v-for="(score, answer) in answers" :key="answer">
+        <a href="#" class="answer" :data-score="score" v-on:click="selectAnswer($event)">
           {{ answer }}
-          <span class="answer-category">{{ category }}</span>
         </a>
       </li>
     </ul>
@@ -13,22 +12,28 @@
 </template>
 
 <script>
-export default {
+import Vue from 'vue'
+
+export default Vue.component('Question', {
   name: 'Question',
   props: {
     question: String,
     answers: Object,
+    category: String,
     index: Number
   },
   methods: {
     selectAnswer (e) {
-      this.$emit('answer-selected', this.index)
+      var answerData = {
+        index: this.index,
+        category: this.category,
+        score: e.target.dataset.score
+      }
+      this.$emit('answer-selected', answerData)
       e.preventDefault()
-      console.log(e)
-      console.log(e.target)
     }
   }
-}
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -50,18 +55,25 @@ h1 {
 
 li {
   list-style: none;
+  border: 1px solid #eee;
+  border-radius: 15px;
   padding: 20px 40px;
   margin-bottom: 15px;
+  text-align: center;
+  overflow: auto;
+  height: auto;
 }
 
 .answer {
+  font-size: 1.1em;
   text-decoration: none;
-  padding: 20px 80px;
-  border: 1px solid #eee;
-  border-radius: 15px;
+  word-wrap: break-word;
+  overflow: auto;
+  height: auto;
+  max-width: 400px;
 }
 
-.answer:hover {
+li:hover {
   background: #eef;
   border: 1px solid #ddf;
 }

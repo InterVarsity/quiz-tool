@@ -5,10 +5,10 @@
       "title": "Which activity would you rather do??",
       "category": "category1",
       "answers": {
-        "Answer1": "3",
-        "Answer2": "1",
-        "Answer3": "0",
-        "Answer4": "2"
+        "Answer1": "4",
+        "Answer2": "2",
+        "Answer3": "1",
+        "Answer4": "3"
       }
     },
     {
@@ -20,13 +20,43 @@
         "Answer3": "3",
         "Answer4": "4"
       }
+    },
+    {
+      "title": "When you eat out, do you order",
+      "category": "crossCulture",
+      "answers": {
+        "Hamburgers and fries or a salad - only hamburgers and fries or a salad": "1",
+        "Something hard to pronounce, but I have eaten before": "2",
+        "Whatever looks unusual": "3",
+        "Whatever the waiter thinks I have never eaten before": "4"
+      }
+    },
+    {
+      "title": "I have been overseas",
+      "category": "crossCulture",
+      "answers": {
+        "Never": "1",
+        "To Mexico or Canada once or twice": "2",
+        "Outside of North America a couple of times": "3",
+        "Several different places several different times": "4"
+      }
     }
   ],
   "results": {
+    "": {
+      "identity": "",
+      "summary": "",
+      "image": ""
+    },
     "category1": {
       "identity": "Famous Person 1",
       "summary": "You're Famous Person 1! That means X, Y, and Z.",
       "image": "famous_person_1.png"
+    },
+    "crossCulture": {
+      "identity": "Famous Person 2",
+      "summary": "You're Famous Person 2! You've got a whole lot of different traits and that's really cool",
+      "image": "famous_person_2.png"
     }
   }
 }
