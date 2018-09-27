@@ -64,36 +64,52 @@ export default Vue.component('Quiz', {
        * Iterate Questions
        */
       this.questionIndex = this.questionIndex + 1
+      // Each answer adds its point value to the category's total score
       this.quizAnswers[e.category] = this.quizAnswers[e.category] + parseInt(e.score)
 
       // Last Question answered
       if (this.questionIndex >= this.quizData.questions.length) {
+        // Calculate Results
+        var curTop = 0
+        var topCat = ''
+
+        // TODO: replace topCat with flags for above/below threshold
+        for (var curCat in this.quizAnswers) {
+          if (this.quizAnswers[curCat] > curTop) {
+            curTop = this.quizAnswers[curCat]
+            topCat = curCat
+          }
+        }
+        this.topCategory = topCat
+
         this.showResults = true
       }
-
-      /*
-       * Calculate Results
-       */
-      var curTop = 0
-      var topCat = ''
-      console.log('topCat')
-      console.log(this.quizAnswers)
-
-      for (var curCat in this.quizAnswers) {
-        console.log('curCat: ' + curCat)
-        console.log('curTop: ' + curTop)
-        console.log(this.quizAnswers[curCat])
-        if (this.quizAnswers[curCat] > curTop) {
-          curTop = this.quizAnswers[curCat]
-          topCat = curCat
-        }
-      }
-      this.topCategory = topCat
-      console.log(this.topCategory)
     },
     loadData: function () {
       var quizData = require('@/quiz.json')
+
+      // Calculate total possible score for each category
+      // iterate through questions in category, find high score for each, sum, store
+      quizData.maxima = new Proxy({}, handler)
+      console.log(quizData.questions)
+      quizData.questions.forEach(function (curQuestion) {
+        console.log(curQuestion)
+        var maxQuestionScore = 0
+
+        // find highest score for question
+        for (let curAnswer in curQuestion.answers) {
+          console.log(curAnswer)
+          if (parseInt(curQuestion.answers[curAnswer]) > maxQuestionScore) {
+            maxQuestionScore = parseInt(curQuestion.answers[curAnswer])
+          }
+        }
+
+        quizData.maxima[curQuestion.category] = maxQuestionScore + quizData.maxima[curQuestion.category]
+      })
+
       this.quizData = quizData
+      console.log(this.quizData.maxima)
+      console.log(this.quizData.maxima['calling'])
     }
   }
 })

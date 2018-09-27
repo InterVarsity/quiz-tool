@@ -17,7 +17,7 @@ import Vue from 'vue'
 
 export default Vue.component('QuizResults', {
   name: 'QuizResults',
-  props: [ 'categoryDetails', 'quizAnswers' ],
+  props: [ 'categoryDetails', 'topCategory', 'quizAnswers' ],
   data () {
     return {
     }
@@ -31,26 +31,6 @@ export default Vue.component('QuizResults', {
     },
     image: function () {
       return '/img/' + this.categoryDetails[this.topCategory].image
-    },
-    topCategory: function () {
-      /*
-       * Calculate Results
-       */
-      var curTop = 0
-      var topCat = ''
-      console.log('topCat')
-      console.log(this.quizAnswers)
-
-      for (var curCat in this.quizAnswers) {
-        console.log('curCat: ' + curCat)
-        console.log('curTop: ' + curTop)
-        console.log(this.quizAnswers[curCat])
-        if (this.quizAnswers[curCat] > curTop) {
-          curTop = this.quizAnswers[curCat]
-          topCat = curCat
-        }
-      }
-      return topCat
     }
   }
 })

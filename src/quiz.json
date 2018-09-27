@@ -1,5 +1,5 @@
 {
-  "title": "Quiz Title",
+  "title": "Who's your apostle doppelganger?",
   "questions": [
     {
       "title": "When you eat out, do you order",
@@ -64,24 +64,44 @@
   ],
   "results": {
     "": {
-      "identity": "",
-      "summary": "",
+      "identity": "Magellan",
+      "summary": "You are an explorer - seeking your place in the world.  You may not have been many places or tried many things, but you have the world open before you.",
       "image": ""
     },
     "loveStudents": {
       "identity": "Bill Nye the Science Guy",
-      "summary": "You love students and those interested in learning.  Being around them makes you happy and you can relate well to their place in life.",
+      "summary": "You love students and those interested in learning. Being around them makes you happy and you can relate well to their place in life.",
       "image": "Bill Nye.jpg"
     },
     "calling": {
       "identity": "Harry Potter",
-      "summary": "You are called to something special - and you know it.  You are taking steps to explore and live into what you know - even now.",
+      "summary": "You are called to something special - and you know it. You are taking steps to explore and live into what you know - even now.",
       "image": "Harry Potter.jpg"
     },
     "crossCulture": {
       "identity": "Peace Corp Volunteer",
-      "summary": "You love crossing cultures to make a difference.  You are willing to sacrifice and serve others in uncomfortable places and contexts.",
+      "summary": "You love crossing cultures to make a difference. You are willing to sacrifice and serve others in uncomfortable places and contexts.",
       "image": "peace corps.jpg"
+    },
+    "loveStudents+calling": {
+      "identity": "Professor Dumbledore",
+      "summary": "You are called to help students find their way. You have a strong sense of who you are and what you were made for - and you love helping students discover that for themselves.",
+      "image": "Prof Dumbledore.jpg"
+    },
+    "loveStudents+crossCulture": {
+      "identity": "Indiana Jones",
+      "summary": "You have a great combination of a love for different cultures and a great connection to students. The combination of those two things is where you shine.",
+      "image": "Indiana Jones 2.jpg"
+    },
+    "calling+crossCulture": {
+      "identity": "Lara Croft",
+      "summary": "You feel at home far from home and there are few who can do what you do there. You have special gifts that find their fulfillment far from the ordinary.",
+      "image": "Lara Croft 1.jpg"
+    },
+    "calling+crossCulture+loveStudents": {
+      "identity": "Lebron James",
+      "summary": "You are strong everywhere - in the paint, fast break, and from long range. Overseas student ministry is a place you feel strongly about and are excited to explore.",
+      "image": "lebron-james-1.jpg"
     }
   }
 }
