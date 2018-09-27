@@ -17,7 +17,7 @@ import Vue from 'vue'
 
 export default Vue.component('QuizResults', {
   name: 'QuizResults',
-  props: [ 'categoryDetails', 'topCategory', 'quizAnswers' ],
+  props: [ 'categoryDetails', 'highCats', 'topCategory', 'quizAnswers' ],
   data () {
     return {
     }

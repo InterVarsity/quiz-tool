@@ -16,6 +16,7 @@
       v-if="showResults"
       :categoryDetails="this.quizData.results"
       :topCategory="topCategory"
+      :highCats="highCats"
       :quizAnswers="quizAnswers"/>
   </div>
 </template>
@@ -50,6 +51,7 @@ export default Vue.component('Quiz', {
       questionIndex: 0,
       showResults: false,
       topCategory: '',
+      highCats: [],
       quizAnswers: Counter
     }
   },
@@ -70,17 +72,17 @@ export default Vue.component('Quiz', {
       // Last Question answered
       if (this.questionIndex >= this.quizData.questions.length) {
         // Calculate Results
-        var curTop = 0
-        var topCat = ''
+        var highCats = [] // high is defined as >= 75% of max
 
         // TODO: replace topCat with flags for above/below threshold
         for (var curCat in this.quizAnswers) {
-          if (this.quizAnswers[curCat] > curTop) {
-            curTop = this.quizAnswers[curCat]
-            topCat = curCat
+          if (this.quizAnswers[curCat] >= (this.quizData.maxima[curCat] * 0.75)) {
+            highCats.push(curCat)
           }
         }
-        this.topCategory = topCat
+        this.highCats = highCats.sort()
+        this.topCategory = highCats.join('+')
+        console.log(this.topCategory)
 
         this.showResults = true
       }
@@ -91,14 +93,11 @@ export default Vue.component('Quiz', {
       // Calculate total possible score for each category
       // iterate through questions in category, find high score for each, sum, store
       quizData.maxima = new Proxy({}, handler)
-      console.log(quizData.questions)
       quizData.questions.forEach(function (curQuestion) {
-        console.log(curQuestion)
         var maxQuestionScore = 0
 
         // find highest score for question
         for (let curAnswer in curQuestion.answers) {
-          console.log(curAnswer)
           if (parseInt(curQuestion.answers[curAnswer]) > maxQuestionScore) {
             maxQuestionScore = parseInt(curQuestion.answers[curAnswer])
           }
@@ -108,8 +107,6 @@ export default Vue.component('Quiz', {
       })
 
       this.quizData = quizData
-      console.log(this.quizData.maxima)
-      console.log(this.quizData.maxima['calling'])
     }
   }
 })
