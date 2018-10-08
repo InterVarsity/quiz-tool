@@ -2,8 +2,8 @@
   <div class="question">
     <h2>{{ question }}</h2>
     <ul>
-      <li v-for="(score, answer) in answers" :key="answer" v-on:click="selectAnswer($event)">
-        <a href="#" class="answer" :data-score="score">
+      <li v-for="answer in shuffledAnswers()" :key="answer" v-on:click="selectAnswer($event)">
+        <a href="#" class="answer" :data-score="answers[answer]">
           {{ answer }}
         </a>
       </li>
@@ -13,6 +13,7 @@
 
 <script>
 import Vue from 'vue'
+var shuffle = require('knuth-shuffle').knuthShuffle
 
 export default Vue.component('Question', {
   name: 'Question',
@@ -23,6 +24,9 @@ export default Vue.component('Question', {
     index: Number
   },
   methods: {
+    shuffledAnswers () {
+      return shuffle(Object.keys(this.answers))
+    },
     selectAnswer (e) {
       var score = 0
       if (e.target.tagName === 'LI') {

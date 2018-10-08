@@ -106,9 +106,6 @@ export default Vue.component('Quiz', {
 
         // accumulate values for question categories
         quizData.maxima[curQuestion.category] = maxQuestionScore + quizData.maxima[curQuestion.category]
-
-        // randomize answer order
-        shuffle(curQuestion.answers)
       })
 
       // randomize the order of the questions
