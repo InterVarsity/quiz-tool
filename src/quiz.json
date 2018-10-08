@@ -1,5 +1,5 @@
 {
-  "title": "Who's your apostle doppelganger?",
+  "title": "Who's your missions persona?",
   "questions": [
     {
       "title": "When you eat out, do you order",
@@ -19,6 +19,26 @@
         "To Mexico or Canada once or twice": "2",
         "Outside of North America a couple of times": "3",
         "Several different places several different times": "4"
+      }
+    },
+    {
+      "title": "Which relationships excite you the most?",
+      "category": "crossCulture",
+      "answers": {
+        "Relationships with someone who is basically my twin.": "1",
+        "Relationships with someone similar to me but with enough differences to keep things interesting": "2",
+        "Relationships with someone who is my opposite": "3",
+        "Relationships with someone that I have to change the way I think in order to understand them": "4"
+      }
+    },
+    {
+      "title": "I have lived outside of North America",
+      "category": "crossCulture",
+      "answers": {
+        "For a month or less": "1",
+        "For 2-3 months": "2",
+        "For 4-6 months": "3",
+        "For more than 6 months": "4"
       }
     },
     {
@@ -42,6 +62,26 @@
       }
     },
     {
+      "title": "The students you spend the most time with are",
+      "category": "loveStudents",
+      "answers": {
+        "My BFFs": "1",
+        "My Christian buds": "2",
+        "Those who help me grow in Christ": "3",
+        "Those whom I want to point to Jesus": "4"
+      }
+    },
+    {
+      "title": "To love God with all my mind means to",
+      "category": "loveStudents",
+      "answers": {
+        "Not think about bad things": "1",
+        "Think about God a lot": "2",
+        "Try and use my mind to bring others closer to Him": "3",
+        "See my vocation and my studies as a way to bring Him glory": "4"
+      }
+    },
+    {
       "title": "Which best describes your sense of God’s calling for your life?",
       "category": "calling",
       "answers": {
@@ -59,6 +99,35 @@
         "Serving Jesus by praying for and giving toward ministries throughout the world": "2",
         "Serving Jesus by loving people who are significantly different from me": "3",
         "Serving Jesus by moving to a culture different from my own": "4"
+      }
+    },
+    {
+      "title": "Have you ever heard God call you to ministry?",
+      "category": "calling",
+      "answers": {
+        "Not clearly": "1",
+        "Once, a while ago": "2",
+        "I think I have, and I am here trying to figure out what it mean": "3",
+        "Yes, clearly, and I am working to shape my life to what I heard": "4"
+      }
+    },    {
+      "title": "What motivates me the most to serve others is",
+      "category": "calling",
+      "answers": {
+        "It’s required of me as a believer": "1",
+        "All of my friends do it and they seem to enjoy it": "2",
+        "I have abilities that I have been given to serve others with": "3",
+        "It’s how I get to know God best": "4"
+      }
+    },
+    {
+      "title": "About my sense of calling",
+      "category": "calling",
+      "answers": {
+        "I have friends who are doing this and it intrigues me": "1",
+        "My friends think I would be good at this": "2",
+        "It is a general sense that I should do good in the world": "3",
+        "I can remember the day, time, and what I was doing when I first felt this calling in my life": "4"
       }
     }
   ],

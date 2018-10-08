@@ -1,0 +1,10 @@
+adapter: s3
+access_key_id: AKIAJNI4NQPA2E4GM37A
+secret_access_key: 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
+bucket_name: its-web.intervarsity.org
+host: s3.us-east-1.amazonaws.com
+path: quiz-tool
+
+exclude:
+    - .gitignore
+    - dandelion.yml

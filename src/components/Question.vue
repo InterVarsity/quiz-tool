@@ -2,8 +2,8 @@
   <div class="question">
     <h2>{{ question }}</h2>
     <ul>
-      <li v-for="(score, answer) in answers" :key="answer">
-        <a href="#" class="answer" :data-score="score" v-on:click="selectAnswer($event)">
+      <li v-for="(score, answer) in answers" :key="answer" v-on:click="selectAnswer($event)">
+        <a href="#" class="answer" :data-score="score">
           {{ answer }}
         </a>
       </li>
@@ -24,10 +24,17 @@ export default Vue.component('Question', {
   },
   methods: {
     selectAnswer (e) {
+      var score = 0
+      if (e.target.tagName === 'LI') {
+        score = e.target.querySelector('.answer').dataset.score
+      } else {
+        score = e.target.dataset.score
+      }
+
       var answerData = {
         index: this.index,
         category: this.category,
-        score: e.target.dataset.score
+        score: score
       }
       this.$emit('answer-selected', answerData)
       e.preventDefault()
@@ -55,7 +62,7 @@ h1 {
 
 li {
   list-style: none;
-  border: 1px solid #eee;
+  border: 2px solid #eee;
   border-radius: 15px;
   padding: 20px 40px;
   margin-bottom: 15px;
@@ -65,6 +72,7 @@ li {
 }
 
 .answer {
+  color: #006880;
   font-size: 1.1em;
   text-decoration: none;
   word-wrap: break-word;
@@ -74,8 +82,11 @@ li {
 }
 
 li:hover {
-  background: #eef;
-  border: 1px solid #ddf;
+  background: #def;
+  border: 2px solid #ddf;
+  -moz-box-shadow:    3px 3px 3px 3px #eee;
+  -webkit-box-shadow: 3px 3px 3px 3px #eee;
+  box-shadow:         3px 3px 3px 3px #eee;
 }
 
 .answer-category {

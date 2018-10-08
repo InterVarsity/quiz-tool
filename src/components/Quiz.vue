@@ -26,6 +26,7 @@ import Vue from 'vue'
 import Question from '@/components/Question.vue'
 import QuizResults from '@/components/QuizResults.vue'
 
+var shuffle = require('knuth-shuffle').knuthShuffle
 var handler = {
   get: function (target, name) {
     return target.hasOwnProperty(name) ? target[name] : 0
@@ -103,8 +104,15 @@ export default Vue.component('Quiz', {
           }
         }
 
+        // accumulate values for question categories
         quizData.maxima[curQuestion.category] = maxQuestionScore + quizData.maxima[curQuestion.category]
+
+        // randomize answer order
+        shuffle(curQuestion.answers)
       })
+
+      // randomize the order of the questions
+      shuffle(quizData.questions)
 
       this.quizData = quizData
     }

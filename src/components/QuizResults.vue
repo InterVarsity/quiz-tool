@@ -30,7 +30,7 @@ export default Vue.component('QuizResults', {
       return this.categoryDetails[this.topCategory].summary
     },
     image: function () {
-      return '/img/' + this.categoryDetails[this.topCategory].image
+      return './assets/img/' + this.categoryDetails[this.topCategory].image
     }
   }
 })
