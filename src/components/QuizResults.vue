@@ -2,7 +2,7 @@
   <div>
     <div id="quiz-results">
       <!-- {{ this.topCategory }} -->
-      <p class="identity">Your persona is {{ identity }}!</p>
+      <p class="identity">Your twin is {{ identity }}!</p>
       <p class="summary">{{ summary }}</p>
       <img class="image" :src="image" />
       <!-- <code> -->

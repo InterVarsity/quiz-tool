@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Quiz
-      title="Who's your apostle doppelganger?" />
+      title="Who is your cross-cultural student ministry twin?" />
   </div>
 </template>
 
