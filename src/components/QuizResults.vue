@@ -1,14 +1,17 @@
 <template>
-  <div id="quiz-results">
-    <!-- {{ this.topCategory }} -->
-    <p class="identity">Your persona is {{ identity }}!</p>
-    <p class="summary">{{ summary }}</p>
-    <img class="image" :src="image" />
-    <!-- <code> -->
-    <!--   {{ quizAnswers }} -->
-    <!--   <hr> -->
-    <!--   {{ categoryDetails }} -->
-    <!-- </code> -->
+  <div>
+    <div id="quiz-results">
+      <!-- {{ this.topCategory }} -->
+      <p class="identity">Your persona is {{ identity }}!</p>
+      <p class="summary">{{ summary }}</p>
+      <img class="image" :src="image" />
+      <!-- <code> -->
+      <!--   {{ quizAnswers }} -->
+      <!--   <hr> -->
+      <!--   {{ categoryDetails }} -->
+      <!-- </code> -->
+    </div>
+    <a href="#" onclick="window.location.reload()">start quiz again</a>
   </div>
 </template>
 
@@ -39,13 +42,13 @@ export default Vue.component('QuizResults', {
 <style scoped>
 #quiz-results {
   font-size: 1.4em;
-  background: #eef;
   padding: 30px;
   border-radius: 15px;
 }
 
 .identity {
-  color: blue;
+  font-size: 1.6em;
+  color: #006880;
   font-weight: bold;
 }
 

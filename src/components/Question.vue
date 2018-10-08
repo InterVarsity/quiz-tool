@@ -66,8 +66,7 @@ h1 {
 
 li {
   list-style: none;
-  border: 2px solid #eee;
-  border-radius: 15px;
+  border: 2px solid rgba(0,104,128,0.5);
   padding: 20px 40px;
   margin-bottom: 15px;
   text-align: center;
@@ -87,10 +86,10 @@ li {
 
 li:hover {
   background: #def;
-  border: 2px solid #ddf;
-  -moz-box-shadow:    3px 3px 3px 3px #eee;
-  -webkit-box-shadow: 3px 3px 3px 3px #eee;
-  box-shadow:         3px 3px 3px 3px #eee;
+  border: 2px solid #006880;
+  -moz-box-shadow:    0px 5px 10px -5px #006880;
+  -webkit-box-shadow: 0px 5px 10px -5px #006880;
+  box-shadow:         0px 5px 10px -5px #006880;
 }
 
 .answer-category {
