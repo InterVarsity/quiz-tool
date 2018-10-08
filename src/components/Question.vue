@@ -76,7 +76,7 @@ li {
 
 .answer {
   color: #006880;
-  font-size: 1.1em;
+  font-size: 1.2em;
   text-decoration: none;
   word-wrap: break-word;
   overflow: auto;
